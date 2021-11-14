@@ -145,7 +145,8 @@ body {
 
 .aya-hero-join {
   background: #34FF6D;
-  padding: 8px 52px 2px;
+  padding: 14px 52px 10px;
+  display: inline-block;
   border: none;
   border-radius: 9px;
   font-family: Teko;
