@@ -1,0 +1,434 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* End of reset css */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: black;
+  /*font-family: 'Rubik', sans-serif;*/
+  font-family: 'Teko', sans-serif;
+  color: white;
+}
+
+.aya-content {
+  max-width: 1250px;
+  margin: auto;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+.aya-lp-heading {
+  padding: 24px 0;
+  /* margin: auto; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.aya-logo {
+  font-family: Teko;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0em;
+  color: white;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  text-decoration: none;
+}
+
+.aya-logo-image {
+  width: 32px;
+  height: 32px;
+  align-self: normal;
+  background: url(/public/favicons/android-chrome-192x192.png);
+  background-size: contain;
+  top: -2px;
+  position: relative;
+}
+
+.aya-header-nav {
+  display: flex;
+  gap: 32px;
+  align-self: center;
+}
+
+.aya-header-nav > a {
+  color: white;
+  font-family: 'Teko';
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.15s opacity;
+}
+
+.aya-header-nav > a:hover {
+  opacity: 0.6;
+}
+
+.aya-header-nav-delimiter {
+  width: 1px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.aya-hero {
+  margin-top: 92px;
+  position: relative;
+  margin-bottom: 128px;
+}
+
+.aya-hero-text {
+  width: 533px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 85px;
+  margin: auto 0;
+  margin-bottom: 32px;
+}
+
+.aya-hero-join {
+  background: #34FF6D;
+  padding: 8px 52px 2px;
+  border: none;
+  border-radius: 9px;
+  font-family: Teko;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  color: #000000;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.15s opacity;
+}
+
+.aya-hero-join:hover {
+  opacity: 0.7;
+}
+
+.aya-hero-video-container {
+  position: absolute;
+  top: -430px;
+  z-index: -1;
+  overflow: hidden;
+}
+.aya-hero-video {
+  position: relative;
+  right: -300px;
+  width: 1200px;
+  height: 1200px;
+}
+
+#about {
+  padding-top: 128px;
+}
+
+#faq {
+  padding-top: 128px;
+  margin-bottom: 256px;
+}
+
+.aya-header2 {
+  font-family: Teko;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 77px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.aya-about {
+  font-family: Rubik;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  max-width: 644px;
+}
+
+.aya-faq {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 16px;
+}
+
+.aya-faq-question {
+  font-family: Teko;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  margin-bottom: 4px;
+}
+
+.aya-faq-answer {
+  font-family: Rubik;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.aya-faq-link {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* carousel */
+
+.aya-card {
+    vertical-align: top;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    width: 200px;
+    border-radius: 2px;
+    transition: .3s;
+    display: inline-block;
+    margin: 16px;
+    position: relative;
+    text-decoration: none;
+    scroll-margin-left: 24px;
+    width: 350px;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border: 4px solid white;
+}
+
+.aya-list {
+    width: 100%;
+    overflow-x: hidden;
+    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    padding-bottom: 32px;
+    margin-bottom: -32px;
+    margin-left: -8px;
+    margin-right: -8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    scroll-snap-type: x proximity;
+    position: relative;
+}
+
+.aya-list-controller {
+    box-shadow: 0 7px 15px rgb(0 0 0 / 20%);
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    opacity: 0;
+    transition: 0.2s opacity;
+    pointer-events: none;
+    border: 4px solid white;
+}
+
+.aya-list-controller:hover {
+    box-shadow: 0 7px 15px rgb(0 0 0 / 50%);
+}
+
+.aya-list-controller--active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.aya-list-container {
+    position: relative;
+}
+
+.aya-list-controller-left {position: absolute;z-index: 10;top: calc(50% - 45px);left: -35px;}
+
+.aya-list-controller > svg {
+    fill: white;
+    width: 24px;
+    height: 24px;
+    margin: auto;
+}
+
+.aya-list-controller-right {
+    position: absolute;
+    z-index: 10;
+    top: calc(50% - 45px);
+    right: -35px;
+}
+
+@media (max-width: 1250px) {
+    .aya-list-controller-left {
+        left: 5px;
+    }
+
+    .aya-list-controller-right {
+        right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .aya-list {
+        overflow-x: scroll;
+    }
+
+    .aya-list-controller--active {
+        display: none;
+    }
+
+    .aya-content {
+      padding: 0 16px;
+    }
+
+    .aya-hero-video-container {
+      top: calc(-50% - 222px);
+      right: calc(-50% + -84px);
+      right: 0;
+      left: 0;
+    }
+
+    .aya-hero-video {
+      right: 300px;
+      width: 960px;
+      height: 960px;
+    }
+
+    .aya-hero {
+      margin-top: 64px;
+      margin-bottom: 128px;
+      position: relative;
+    }
+
+    .aya-hero-text {
+      font-size: 48px;
+      line-height: 1.2;
+      width: auto;
+      margin-bottom: 64px;
+    }
+
+    .aya-header-nav {
+      gap: 16px;
+    }
+
+    #about {
+      padding-top: 12px;
+    }
+
+    #faq {
+      padding-top: 12px;
+      margin-bottom: 64px;
+    }
+
+    .aya-header2 {
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .aya-about {
+      font-size: 16px;
+    }
+
+    .aya-faq {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .aya-faq-question {
+      font-size: 19px;
+      line-height: 1;
+      margin-bottom: 8px;
+      letter-spacing: 0.6px;
+    }
+
+    .aya-faq-answer {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .aya-card {
+      width: 260px;
+      height: 260px;
+    }
+}
+/* end carousel */
+
+.aya-mb-16 {
+  margin-bottom: 16px;
+}
+
+.aya-mb-48 {
+  margin-bottom: 48px;
+}
+
+.aya-mb-64 {
+  margin-bottom: 64px;
+}
+
+.aya-mb-128 {
+  margin-bottom: 128px;
+}
+
+.aya-mb-256 {
+  margin-bottom: 256px;
+}
