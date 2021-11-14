@@ -156,6 +156,7 @@ body {
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.15s opacity;
+  text-decoration: none;
 }
 
 .aya-hero-join:hover {
