@@ -26,8 +26,21 @@ class Carousel {
     this.margin = margin;
     this.offset = offset;
 
+
+
     this.reset();
     window.addEventListener('resize', throttle(this.resize.bind(this), 100));
+
+    this.handleMouseDown = this.handleMouseDown.bind(this);
+    this.handleMouseUp = this.handleMouseUp.bind(this);
+    this.handleMouseMove = this.handleMouseMove.bind(this);
+
+    this.pos = { top: 0, left: 0, x: 0, y: 0 };
+    this.dragging = false;
+    this.content.style.cursor = 'grab'
+    this.content.addEventListener('mousedown', this.handleMouseDown);
+    this.content.addEventListener('mouseup', this.handleMouseUp);
+    this.content.addEventListener('mousemove', this.handleMouseMove);
   }
 
   updateArrowVisiblity(scrollLeftTarget) {
@@ -109,6 +122,41 @@ class Carousel {
 
     this.content.scrollLeft = 0;
     this.updateArrowVisiblity();
+  }
+
+  handleMouseUp() {
+    this.dragging = false;
+    this.content.style.cursor = 'grab';
+    this.content.style.removeProperty('user-select');
+    this.updateArrowVisiblity();
+  }
+
+  handleMouseDown(event) {
+    this.dragging = true;
+
+    this.content.style.cursor = 'grabbing';
+    this.content.style.userSelect = 'none';
+
+    this.pos = {
+        left: this.content.scrollLeft,
+        top: this.content.scrollTop,
+        // Get the current mouse position
+        x: event.clientX,
+        y: event.clientY,
+    };
+  }
+
+  handleMouseMove(event) {
+    if (!this.dragging) {
+      return;
+    }
+    // How far the mouse has been moved
+    const dx = event.clientX - this.pos.x;
+    const dy = event.clientY - this.pos.y;
+
+    // Scroll the element
+    this.content.scrollTop = this.pos.top - dy;
+    this.content.scrollLeft = this.pos.left - dx;
   }
 }
 
