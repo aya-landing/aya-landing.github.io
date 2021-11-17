@@ -39,8 +39,6 @@ class Carousel {
     this.dragging = false;
     this.content.style.cursor = 'grab'
     this.content.addEventListener('mousedown', this.handleMouseDown);
-    this.content.addEventListener('mouseup', this.handleMouseUp);
-    this.content.addEventListener('mousemove', this.handleMouseMove);
   }
 
   updateArrowVisiblity(scrollLeftTarget) {
@@ -129,6 +127,9 @@ class Carousel {
     this.content.style.cursor = 'grab';
     this.content.style.removeProperty('user-select');
     this.updateArrowVisiblity();
+
+    document.body.removeEventListener('mouseup', this.handleMouseUp);
+    document.body.removeEventListener('mousemove', this.handleMouseMove);
   }
 
   handleMouseDown(event) {
@@ -144,6 +145,9 @@ class Carousel {
         x: event.clientX,
         y: event.clientY,
     };
+
+    document.body.addEventListener('mouseup', this.handleMouseUp);
+    document.body.addEventListener('mousemove', this.handleMouseMove);
   }
 
   handleMouseMove(event) {
