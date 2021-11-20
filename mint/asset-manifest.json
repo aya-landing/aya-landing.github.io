@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/mint/static/css/main.bc4f8f33.chunk.css",
+    "main.js": "/mint/static/js/main.b97a6785.chunk.js",
+    "runtime-main.js": "/mint/static/js/runtime-main.b02dd692.js",
+    "static/js/2.2f2ac8b2.chunk.js": "/mint/static/js/2.2f2ac8b2.chunk.js",
+    "static/js/3.cf5109d8.chunk.js": "/mint/static/js/3.cf5109d8.chunk.js",
+    "index.html": "/mint/index.html",
+    "static/js/2.2f2ac8b2.chunk.js.LICENSE.txt": "/mint/static/js/2.2f2ac8b2.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/mint/static/media/hero-image2.bd6e1a56.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b02dd692.js",
+    "static/js/2.2f2ac8b2.chunk.js",
+    "static/css/main.bc4f8f33.chunk.css",
+    "static/js/main.b97a6785.chunk.js"
+  ]
+}
