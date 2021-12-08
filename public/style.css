@@ -549,6 +549,17 @@ body {
     line-height: 1.5;
     margin-bottom: 16px;
   }
+
+  .roadmap-list {
+    padding-bottom: 16px;
+  }
+
+  .aya-faq-wave {
+    display: block;
+    font-size: 13px;
+    color: #ccc;
+    margin-top: 4px;
+  }
 }
 
 .aya-mb-16 {
