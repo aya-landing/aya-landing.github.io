@@ -240,6 +240,30 @@ body {
   text-decoration: none;
 }
 
+.aya-check-more {
+  font-family: Rubik;
+  line-height: 1.5;
+  color: #ccc;
+  text-decoration: none;
+  margin-left: 16px;
+  /* margin-top: 48px; */
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+  .aya-check-more:hover {
+    text-decoration: underline;
+  }
+
 
 /* carousel */
 
@@ -388,7 +412,7 @@ body {
     }
 
     .aya-header-nav {
-      gap: 16px;
+      gap: 8px;
     }
 
     #about {
