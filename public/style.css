@@ -536,6 +536,13 @@ body {
   margin-bottom: 0;
 }
 
+.aya-start-today {
+  font-size: 18px;
+  margin-top: 8px;
+  color: #ccc;
+  margin-left: 20px;
+}
+
 @media (max-width: 768px) {
   .roadmap {
     display: block;
@@ -583,6 +590,10 @@ body {
     font-size: 13px;
     color: #ccc;
     margin-top: 4px;
+  }
+
+  .aya-start-today {
+    margin-left: 0;
   }
 }
 
