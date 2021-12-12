@@ -176,6 +176,7 @@ function setup() {
 function draw() {
   strokeWeight(strokeWidth);
   stroke(currentColor);
+
   // Shape Color
   if (palette == 'Spectrum') {
     if (flow == 'Regular') {
